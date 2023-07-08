@@ -1,0 +1,48 @@
+Next steps:
+1. Set the DATABASE_URL in the .env file to point to your existing database. If your database has no tables yet, read https://pris.ly/d/getting-started
+2. Run prisma db pull to turn your database schema into a Prisma schema.
+3. Run prisma generate to generate the Prisma Client. You can then start querying your database.
+
+More information in our documentation:
+https://pris.ly/d/getting-started
+
+
+This was the command to set up the prisma ORM and set up the
+db in the local file
+
+
+ 6:18PM Projects/remix-jokes: npx prisma migrate dev --name init
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "dev.db" at "file:./dev.db"
+
+SQLite database dev.db created at file:./dev.db
+
+Applying migration `20230701002229_init`
+
+The following migration(s) have been created and applied from new schema changes:
+
+migrations/
+  └─ 20230701002229_init/
+    └─ migration.sql
+
+Your database is now in sync with your schema.
+
+✔ Generated Prisma Client (4.16.2 | library) to ./node_modules/@prisma/client in 128m
+s
+
+
+If the prisma schema is updated run the following to reset the db to the new schema:
+
+npx prisma db push
+
+
+to run the db seed again:
+
+npx prisma db seed
+
+
+**************************************************
+To see the db in the browser (localhost:55555)  :
+
+npx prisma studio
